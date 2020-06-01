@@ -15,7 +15,9 @@ public class Robotic extends VirtualPet {
         System.out.println("I pass voltage through my receiving conductors on my coil pack to quench my energy decline.");
     }
     @Override
-    public void get
+    public void getAttention(){
+        System.out.println("Can you check my gears for play time.");
+    }
 
     @Override
     public void eat() {
