@@ -6,6 +6,7 @@ import java.util.HashMap;
 public class VirtualPetShelter {
 
 
+
     public Collection<VirtualPet> retrieveVirtualPet() {
         return petShelter.values();
     }
@@ -25,21 +26,22 @@ public class VirtualPetShelter {
         petShelter.put(roboticDog.getName(), roboticDog);
     }
 
+
     public void feedPets() {
         for (VirtualPet pet : petShelter.values()) {
-            pet.();
+            pet.feed();
         }
     }
 
     public void waterPets() {
         for (VirtualPet pet : petShelter.values()) {
-            pet.thirst();
+            pet.waterPets();
         }
     }
 
     public void playWithPets() {
         for (VirtualPet pet : petShelter.values()) {
-            pet.play();
+            pet.fixBoredom();
         }
     }
 
@@ -49,7 +51,7 @@ public class VirtualPetShelter {
 
     public void tickAllPets() {
         for (VirtualPet pet : petShelter.values()) {
-            pet.tick();
+            pet.tickAll();
         }
     }
 }

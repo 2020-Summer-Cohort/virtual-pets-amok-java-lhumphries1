@@ -46,6 +46,26 @@ public class OrganicDog extends Dog implements Organic {
         cleanliness -= 1;
     }
 
+    @Override
+    public void tickAll() {
+
+    }
+
+    @Override
+    public String getBoredomNeed() {
+        return null;
+    }
+
+    @Override
+    int getThirstNeed() {
+        return 0;
+    }
+
+    @Override
+    public int getHungerNeed() {
+        return 0;
+    }
+
     public void tick() {
         hunger = hunger + 2;
         thirst = thirst + 2;

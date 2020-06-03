@@ -20,10 +20,31 @@ public class OrganicCat extends Cat implements Organic {
     }
 
 
+
     @Override
     public void cageNeedsCleaned() {
         cageNeedsCleaned = false;
         System.out.println("Box needs cleaned. :-( ");
+    }
+
+    @Override
+    public void tickAll() {
+
+    }
+
+    @Override
+    public String getBoredomNeed() {
+        return null;
+    }
+
+    @Override
+    int getThirstNeed() {
+        return 0;
+    }
+
+    @Override
+    public int getHungerNeed() {
+        return 0;
     }
 
     @Override

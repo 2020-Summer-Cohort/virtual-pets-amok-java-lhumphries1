@@ -9,6 +9,26 @@ public class RoboticCat extends Cat implements Robotic {
         super(name, description);
     }
 
+    @Override
+    public void tickAll() {
+
+    }
+
+    @Override
+    public String getBoredomNeed() {
+        return null;
+    }
+
+    @Override
+    int getThirstNeed() {
+        return 0;
+    }
+
+    @Override
+    public int getHungerNeed() {
+        return 0;
+    }
+
     public RoboticCat(String name, String description, int batteryLevel, int oilLevel, int gearMaintance) {
         super(name, description);
         this.batteryLevel = batteryLevel;

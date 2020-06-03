@@ -1,9 +1,13 @@
 package pets_amok;
 
 public abstract class VirtualPet {
+    public VirtualPet(String newPetName) {
+    }
+
     public String getName() {
         return name;
     }
+
     protected String name;
     protected String description;
     protected int happiness;
@@ -21,5 +25,26 @@ public abstract class VirtualPet {
         this.happiness = happiness;
         this.health = health;
     }
-}
 
+    public void feed() {
+    }
+
+    public void waterPets() {
+    }
+
+    public void fixBoredom() {
+    }
+
+    public void cageNeedsCleaned() {
+    }
+
+    public abstract void tickAll();
+
+
+
+    public abstract String getBoredomNeed();
+
+    abstract int getThirstNeed();
+
+    public abstract int getHungerNeed();
+}

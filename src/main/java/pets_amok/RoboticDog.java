@@ -13,6 +13,26 @@ public class RoboticDog extends Dog implements Robotic {
     }
 
     @Override
+    public void tickAll() {
+
+    }
+
+    @Override
+    public String getBoredomNeed() {
+        return null;
+    }
+
+    @Override
+    int getThirstNeed() {
+        return 0;
+    }
+
+    @Override
+    public int getHungerNeed() {
+        return 0;
+    }
+
+    @Override
     public void walkDogs() {
 
     }
