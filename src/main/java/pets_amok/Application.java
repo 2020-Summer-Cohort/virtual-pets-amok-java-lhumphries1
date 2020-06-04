@@ -6,11 +6,11 @@ public class Application {
     VirtualPetShelter virtualPetShelter = new VirtualPetShelter();
 
 
-//    public static void main(String[] args){
+    //    public static void main(String[] args){
 //        for (VirtualPet animalCall : VirtualPetShelter.retrieveVirtualPet(){
 //            System.out.println(animalCall.animalCall);
 //        }
-static Scanner input = new Scanner(System.in);
+    static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
         System.out.println("Welcome to the Pet Shelter");
@@ -80,27 +80,28 @@ static Scanner input = new Scanner(System.in);
                 System.out.println("Admit a pet to the shelter.");
                 System.out.println("What is your pets name?");
                 String newPetName = input.nextLine();
-                VirtualPet newPet = new VirtualPet(newPetName) {
-                    @Override
-                    public void tickAll() {
 
-                    }
-
-                    @Override
-                    public String getBoredomNeed() {
-                        return null;
-                    }
-
-                    @Override
-                    int getThirstNeed() {
-                        return 0;
-                    }
-
-                    @Override
-                    public int getHungerNeed() {
-                        return 0;
-                    }
-                };
+                System.out.println("Describe of you pet.");
+                String description = input.nextLine();
+                System.out.println("What type is your pet.");
+                System.out.println("1. Robotic Dog");
+                System.out.println("2. Robotic Cat");
+                System.out.println("3. Dog");
+                System.out.println("4. Cat");
+                switch (input.nextInt()) {
+                    case 1:
+                        virtualPetShelter.petShelter.put(newPetName, new RoboticDog(newPetName, description));
+                    case 2:
+                        virtualPetShelter.petShelter.put(newPetName, new RoboticCat(newPetName, description));
+                    case 3:
+                        virtualPetShelter.petShelter.put(newPetName, new OrganicDog(newPetName, description));
+                    case 4:
+                        virtualPetShelter.petShelter.put(newPetName, new OrganicCat(newPetName, description));
+                }
+                OrganicCat newPet = new OrganicCat(newPetName, description);
+                OrganicDog newPet1 = new OrganicDog(newPetName, description);
+                RoboticCat newPet2 = new RoboticCat(newPetName, description);
+                RoboticDog newPet3 = new RoboticDog(newPetName, description);
                 virtualPetShelter.petShelter.put(newPet.getName(), newPet);
                 printPetStatus(virtualPetShelter);
             }
@@ -121,6 +122,6 @@ static Scanner input = new Scanner(System.in);
             System.out.println("Play " + pet.getBoredomNeed());
             System.out.println("Drink " + pet.getThirstNeed());
 
-       }
+        }
     }
 }
